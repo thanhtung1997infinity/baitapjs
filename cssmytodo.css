@@ -1,7 +1,13 @@
 li{
+    padding: 5px 5px;
     list-style: none;
-    justify-content: space-between;
     display: flex;
+}
+i.fa-check {
+    display: none;
+}
+li:nth-child(odd) {
+    background-color: #eee;
 }
 .header-mytodo {
     padding: 15px 0;
@@ -22,6 +28,20 @@ li:hover {
 .ulchung button:hover{
     background-color: #f44336;
 }
-.click-li {
-    background-color: red;
+.click-li{
+    background-color: #888 !important;
+    color: #fff;
+}
+.click-span{
+    text-decoration: line-through;
+}
+.btn-tick {
+    width: 20px;
+    height: 10px;
+}
+.div-button {
+    margin: 0 0 0 auto;
+}
+.ontick {
+    display: block !important;
 }

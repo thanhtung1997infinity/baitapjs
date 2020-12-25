@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./cssmytodo.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body>
@@ -13,28 +14,44 @@
         <input id="nhapvao" type="text"><button class="btn-add" onclick="add()">add</button>
     </div>
     <ul class="ulchung" id="theul">
-
     </ul>
     <script>
         function add() {
-            var nhapvao = document.getElementById("nhapvao").value;
-            console.log(nhapvao)
-            var theul = document.getElementById("theul");
-            var theli = document.createElement("li");
-            theul.appendChild(theli);
-            var noidung = document.createTextNode(nhapvao);
-            theli.appendChild(noidung);
-            var thebtn = document.createElement("button");
-            thebtn.innerHTML = "x";
-            theli.appendChild(thebtn);
-            theli.onclick = function () {
-                theli.classList.toggle("click-li")
-                console.log(theli)
+            var x = document.getElementById("nhapvao").value;
+            if (x == "") {
+                alert("vui long nhap lai");
             }
-            thebtn.onclick = function () {
-                theul.removeChild(theli)
+            else {
+                console.log(x)
+                var nhapvao = document.getElementById("nhapvao").value;
+                var theul = document.getElementById("theul");
+                var theli = document.createElement("li");
+                theul.appendChild(theli);
+                var divtick = document.createElement("div");
+                theli.appendChild(divtick);
+                divtick.className = "btn-tick"
+                var thei = document.createElement("i");
+                divtick.appendChild(thei);
+                thei.className = "fas fa-check";
+                var noidung = document.createTextNode(nhapvao);
+                var thespan = document.createElement("span");
+                theli.appendChild(thespan);
+                thespan.appendChild(noidung);
+                var thediv = document.createElement("div");
+                theli.appendChild(thediv);
+                thediv.className = "div-button"
+                var thebtn = document.createElement("button");
+                thebtn.innerHTML = "x";
+                thediv.appendChild(thebtn);
+                theli.onclick = function () {
+                    theli.classList.toggle("click-li")
+                    thespan.classList.toggle("click-span")
+                    thei.classList.toggle("ontick")
+                }
+                thebtn.onclick = function () {
+                    theul.removeChild(theli)
+                }
             }
-
         }
 
 

@@ -29,19 +29,20 @@
         var mang = [];
         var sochan = [];
         var sole = [];
-        var nhapvao = document.getElementById("nhapvao");
-        nhapvao.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                document.getElementById("enter").click();
-            }
-        });
+        // var nhapvao = document.getElementById("nhapvao");
+        // nhapvao.addEventListener("keyup", function (event) {
+        //     if (event.keyCode === 13) {
+        //         event.preventDefault();
+        //         document.getElementById("enter").click();
+        //     }
+        // });
 
         function add() {
 
             var x = document.getElementById('nhapvao').validity.valid;
             if (x == false) {
                 alert("vui long nhap lai");
+                console.log(x)
             }
             else {
                 var nhapvao = parseInt(document.getElementById("nhapvao").value);
