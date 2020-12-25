@@ -102,12 +102,13 @@
             var i,j,tg;
             var dem = mang.length;
             for( i = 0; i < dem - 1; i++){
-                for(j = i+1; j < n; j++){
+                for(j = i+1; j < dem; j++){
                     if(mang[i] > mang[j]){
                         tg = mang[i];
                         mang[i] = mang[j];
                         mang[j] = tg;
                     }
+                    console.log(mang)
                 }
             }
             document.getElementById("tanggiam").innerHTML = mang;
@@ -117,7 +118,7 @@
             var i,j,tg;
             var dem = mang.length;
             for(i = 0; i < dem - 1; i++) {
-                for(j = i+1; j < n; j++) {
+                for(j = i+1; j < dem; j++) {
                     if(mang[i] < mang[j]) {
                         tg = mang[i];
                         mang[i] = mang[j];

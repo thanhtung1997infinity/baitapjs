@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cssmytodo.css">
+</head>
+
+<body>
+    <div class="header-mytodo">
+        <h2>My To Do List</h2>
+        <input id="nhapvao" type="text"><button class="btn-add" onclick="add()">add</button>
+    </div>
+    <ul class="ulchung" id="theul">
+
+    </ul>
+    <script>
+        function add() {
+            var nhapvao = document.getElementById("nhapvao").value;
+            console.log(nhapvao)
+            var theul = document.getElementById("theul");
+            var theli = document.createElement("li");
+            theul.appendChild(theli);
+            var noidung = document.createTextNode(nhapvao);
+            theli.appendChild(noidung);
+            var thebtn = document.createElement("button");
+            thebtn.innerHTML = "x";
+            theli.appendChild(thebtn);
+            theli.onclick = function () {
+                theli.classList.toggle("click-li")
+                console.log(theli)
+            }
+            thebtn.onclick = function () {
+                theul.removeChild(theli)
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

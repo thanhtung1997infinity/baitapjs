@@ -1,0 +1,27 @@
+li{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+}
+.header-mytodo {
+    padding: 15px 0;
+    background-color: red;
+    text-align: center;
+}
+input {
+    width: 30%;
+    height: 35px;
+}
+.btn-add {
+    background-color: #d9d9d9;
+    padding: 8px 20px;
+}
+li:hover {
+    background-color: #ddd;
+}
+.ulchung button:hover{
+    background-color: #f44336;
+}
+.click-li {
+    background-color: red;
+}
